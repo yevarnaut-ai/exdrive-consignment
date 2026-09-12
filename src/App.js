@@ -68,39 +68,6 @@ export default function ExdriveConsignment() {
     setIsLoading(false);
   };
 
-  const processSteps = [
-    {
-      step: 1,
-      title: 'Inspection',
-      description: 'Comprehensive evaluation of your vehicle condition, documentation, and market potential'
-    },
-    {
-      step: 2,
-      title: 'Detail',
-      description: 'Professional cleaning, polishing, and detailing to showcase your car in its best form'
-    },
-    {
-      step: 3,
-      title: 'Photograph',
-      description: 'Studio and location photography capturing every detail with professional lighting'
-    },
-    {
-      step: 4,
-      title: 'Content',
-      description: 'Professional BaT listing crafted with complete history, service records, and specifications'
-    },
-    {
-      step: 5,
-      title: 'List',
-      description: 'Strategic timing and positioning on premium marketplaces for maximum reach and bidder competition'
-    },
-    {
-      step: 6,
-      title: 'Auction',
-      description: 'Real-time engagement with serious bidders and transparent sale execution'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       {/* Navigation */}
