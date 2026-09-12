@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Check, ChevronRight } from 'lucide-react';
+import { Mail, MapPin, Check, ChevronRight, BarChart3, CheckCircle2, Users, Zap, Magnifier, Sparkles, Camera, FileText, Trophy } from 'lucide-react';
 import './App.css';
 
 export default function ExdriveConsignment() {
@@ -11,6 +11,7 @@ export default function ExdriveConsignment() {
     make: '',
     model: '',
     mileage: '',
+    vin: '',
     condition: ''
   });
   
@@ -53,6 +54,7 @@ export default function ExdriveConsignment() {
           make: '',
           model: '',
           mileage: '',
+          vin: '',
           condition: ''
         });
         setTimeout(() => setSubmitted(false), 5000);
@@ -90,7 +92,7 @@ export default function ExdriveConsignment() {
     {
       step: 5,
       title: 'List',
-      description: 'Strategic timing and positioning on Bring a Trailer for maximum reach'
+      description: 'Strategic timing and positioning on premium marketplaces for maximum reach and bidder competition'
     },
     {
       step: 6,
@@ -113,8 +115,8 @@ export default function ExdriveConsignment() {
       <div className="relative h-96 bg-gradient-to-b from-slate-900 to-slate-950 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-transparent to-slate-950 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=1200&h=500&fit=crop"
-          alt="Red Porsche Cayenne luxury SUV"
+          src="https://res.cloudinary.com/pgzc99gb/image/upload/v1789240317/Hero_section.jpg"
+          alt="ExDrive luxury car"
           className="absolute inset-0 w-full h-full object-cover opacity-50"
           loading="eager"
         />
@@ -123,7 +125,7 @@ export default function ExdriveConsignment() {
             Sell Your Enthusiast Car for Top Dollar
           </h1>
           <p className="text-lg text-slate-300 max-w-lg">
-            The fastest, most expert path to getting your vehicle in front of serious buyers on Bring a Trailer.
+            The fastest, most expert path to getting your vehicle in front of serious collectors and enthusiasts.
           </p>
         </div>
       </div>
@@ -132,19 +134,28 @@ export default function ExdriveConsignment() {
       <div className="bg-slate-900 border-y border-slate-800">
         <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-12">
           <div>
-            <h3 className="font-semibold mb-3 text-white">BaT Specialists</h3>
+            <div className="flex items-center gap-3 mb-3">
+              <BarChart3 className="w-8 h-8 text-blue-400 flex-shrink-0" />
+              <h3 className="font-semibold text-white">Auction Experts</h3>
+            </div>
             <p className="text-slate-400 leading-relaxed text-sm">
-              We live and breathe Bring a Trailer. Deep knowledge of auction mechanics, buyer expectations, and what sells.
+              Deep knowledge of premium automotive marketplaces, buyer expectations, and what achieves top dollar results.
             </p>
           </div>
           <div>
-            <h3 className="font-semibold mb-3 text-white">95% Success Rate</h3>
+            <div className="flex items-center gap-3 mb-3">
+              <CheckCircle2 className="w-8 h-8 text-green-400 flex-shrink-0" />
+              <h3 className="font-semibold text-white">95% Success Rate</h3>
+            </div>
             <p className="text-slate-400 leading-relaxed text-sm">
               Nearly every car we consign sells. Transparent process, realistic pricing, expert positioning.
             </p>
           </div>
           <div>
-            <h3 className="font-semibold mb-3 text-white">Personalized Service</h3>
+            <div className="flex items-center gap-3 mb-3">
+              <Users className="w-8 h-8 text-purple-400 flex-shrink-0" />
+              <h3 className="font-semibold text-white">Personalized Service</h3>
+            </div>
             <p className="text-slate-400 leading-relaxed text-sm">
               Yev handles every car personally. No mass-market operations. Your car gets individual attention.
             </p>
@@ -156,13 +167,71 @@ export default function ExdriveConsignment() {
       <div className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-3xl font-bold mb-16">The ExDrive Process</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {processSteps.map((item, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
-              <div className="text-4xl font-light text-slate-500 mb-4">{item.step}</div>
-              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
+            <div className="flex items-start gap-4 mb-4">
+              <Magnifier className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+              <div>
+                <div className="text-4xl font-light text-slate-500 mb-2">1</div>
+              </div>
             </div>
-          ))}
+            <h3 className="font-semibold text-lg mb-2">Inspection</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Comprehensive evaluation of your vehicle condition, documentation, and market potential</p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
+            <div className="flex items-start gap-4 mb-4">
+              <Sparkles className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
+              <div>
+                <div className="text-4xl font-light text-slate-500 mb-2">2</div>
+              </div>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Detail</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Professional cleaning, polishing, and detailing to showcase your car in its best form</p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
+            <div className="flex items-start gap-4 mb-4">
+              <Camera className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+              <div>
+                <div className="text-4xl font-light text-slate-500 mb-2">3</div>
+              </div>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Photograph</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Studio and location photography capturing every detail with professional lighting</p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
+            <div className="flex items-start gap-4 mb-4">
+              <FileText className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
+              <div>
+                <div className="text-4xl font-light text-slate-500 mb-2">4</div>
+              </div>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Content</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Professional listing crafted with complete history, service records, and specifications</p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
+            <div className="flex items-start gap-4 mb-4">
+              <CheckCircle2 className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+              <div>
+                <div className="text-4xl font-light text-slate-500 mb-2">5</div>
+              </div>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">List</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Strategic timing and positioning on premium marketplaces for maximum reach and bidder competition</p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
+            <div className="flex items-start gap-4 mb-4">
+              <Trophy className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
+              <div>
+                <div className="text-4xl font-light text-slate-500 mb-2">6</div>
+              </div>
+            </div>
+            <h3 className="font-semibold text-lg mb-2">Auction</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Real-time engagement with serious bidders and transparent sale execution</p>
+          </div>
         </div>
       </div>
 
@@ -174,8 +243,8 @@ export default function ExdriveConsignment() {
             {/* Cayenne Turbo S */}
             <div className="relative group overflow-hidden rounded-lg aspect-square bg-slate-800">
               <img 
-                src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=400&fit=crop"
-                alt="2014 Porsche Cayenne Turbo S - Red SUV"
+                src="https://res.cloudinary.com/pgzc99gb/image/upload/v1789239761/2014_porsche_cayenne-turbo-s_233-75243-scaled.webp"
+                alt="2014 Porsche Cayenne Turbo S"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
@@ -190,8 +259,8 @@ export default function ExdriveConsignment() {
             {/* 911 Carrera 4S */}
             <div className="relative group overflow-hidden rounded-lg aspect-square bg-slate-800">
               <img 
-                src="https://images.unsplash.com/photo-1585345604214-4230a8ce3dcf?w=400&h=400&fit=crop"
-                alt="2004 Porsche 911 Carrera 4S Cabriolet - Silver"
+                src="https://res.cloudinary.com/pgzc99gb/image/upload/v1789239762/2004_porsche_911-carrera-4s-cabriolet_229-71134-scaled.webp"
+                alt="2004 Porsche 911 Carrera 4S Cabriolet"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
@@ -206,8 +275,8 @@ export default function ExdriveConsignment() {
             {/* Range Rover */}
             <div className="relative group overflow-hidden rounded-lg aspect-square bg-slate-800">
               <img 
-                src="https://images.unsplash.com/photo-1606661160336-a0a40f9d1ecd?w=400&h=400&fit=crop"
-                alt="2020 Land Rover Range Rover SVAutobiography - Black"
+                src="https://res.cloudinary.com/pgzc99gb/image/upload/v1789239762/2020_Land_Rover-DSC8425-scaled-18422.webp"
+                alt="2020 Land Rover Range Rover SVAutobiography"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
@@ -222,8 +291,8 @@ export default function ExdriveConsignment() {
             {/* SL65 AMG */}
             <div className="relative group overflow-hidden rounded-lg aspect-square bg-slate-800">
               <img 
-                src="https://images.unsplash.com/photo-1553882900-d174edf69254?w=400&h=400&fit=crop"
-                alt="2005 Mercedes-Benz SL65 AMG - Black"
+                src="https://res.cloudinary.com/pgzc99gb/image/upload/v1789239763/SL65-DSC1771-scaled-21633.webp"
+                alt="2005 Mercedes-Benz SL65 AMG"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
@@ -258,7 +327,7 @@ export default function ExdriveConsignment() {
                 <MapPin className="w-5 h-5 text-slate-500 flex-shrink-0 mt-0.5" />
                 <div className="text-sm">
                   <p className="font-medium">Sacramento, CA</p>
-                  <p className="text-slate-400">Drive Exchange LLC</p>
+                  <p className="text-slate-400">ExDrive</p>
                 </div>
               </div>
             </div>
@@ -346,6 +415,14 @@ export default function ExdriveConsignment() {
                 onChange={handleChange}
                 className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg focus:border-slate-600 focus:outline-none text-white placeholder-slate-500 text-sm"
               />
+              <input
+                type="text"
+                name="vin"
+                placeholder="VIN (optional)"
+                value={formData.vin}
+                onChange={handleChange}
+                className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg focus:border-slate-600 focus:outline-none text-white placeholder-slate-500 text-sm"
+              />
             </div>
 
             <textarea
@@ -379,7 +456,7 @@ export default function ExdriveConsignment() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <p className="font-semibold mb-4">ExDrive</p>
-              <p className="text-sm text-slate-400">BaT specialists. Your car, top dollar.</p>
+              <p className="text-sm text-slate-400">Auction experts. Your car, top dollar.</p>
             </div>
             <div>
               <p className="font-semibold text-sm mb-4">Contact</p>
@@ -392,10 +469,9 @@ export default function ExdriveConsignment() {
               <p className="text-sm text-slate-400">24-hour response</p>
             </div>
             <div>
-              <p className="font-semibold text-sm mb-4">Bring a Trailer</p>
-              <a href="https://bringatrailer.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-white transition-colors">
-                View Listings
-              </a>
+              <p className="font-semibold text-sm mb-4">Process</p>
+              <p className="text-sm text-slate-400">6 steps to success</p>
+              <p className="text-sm text-slate-400">Fast turnaround</p>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8">
