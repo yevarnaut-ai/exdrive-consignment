@@ -70,7 +70,7 @@ export default function ExdriveConsignment() {
     {
       step: 1,
       title: 'Inspection',
-      description: 'Comprehensive evaluation of your vehicle's condition, documentation, and market potential'
+      description: 'Comprehensive evaluation of your vehicle condition, documentation, and market potential'
     },
     {
       step: 2,
