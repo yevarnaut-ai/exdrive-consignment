@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Check, ChevronRight, BarChart3, CheckCircle2, Users, Zap, Magnifier, Sparkles, Camera, FileText, Trophy } from 'lucide-react';
+import { Mail, MapPin, Check, ChevronRight, BarChart3, CheckCircle2, Users, Search, Sparkles, Camera, FileText, Trophy } from 'lucide-react';
 import './App.css';
 
 export default function ExdriveConsignment() {
@@ -169,7 +169,7 @@ export default function ExdriveConsignment() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition-colors">
             <div className="flex items-start gap-4 mb-4">
-              <Magnifier className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
+              <Search className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
               <div>
                 <div className="text-4xl font-light text-slate-500 mb-2">1</div>
               </div>
